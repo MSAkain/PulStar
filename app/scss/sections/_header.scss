@@ -1,0 +1,152 @@
+.header {
+
+	&__top {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 24px 0;
+	}
+
+	&__nav {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		max-width: 612px;
+		width: 100%;
+	}
+
+	&__list {
+		display: flex;
+		margin-right: 20px;
+	}
+
+	&__item {
+		&:not(:last-child) {
+			margin-right: 40px;
+		}
+	}
+
+	&__link {
+		transition: color 0.5s ease-in;
+
+		&:hover {
+			color: $accent;
+		}
+	}
+
+	&__buttons {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		max-width: 200px;
+		width: 100%;
+	}
+
+	&__button {
+		max-width: 114px;
+		width: 100%;
+		background-color: $grey;
+		padding: 14px 18px 12px 18px;
+		font-size: 12px;
+		border-radius: 3px;
+		margin-right: 12px;
+	}
+
+	&__box {
+		position: relative;
+		max-width: 69px;
+		width: 100%;
+		height: 42px;
+		background-color: $grey-2;
+		border-radius: 3px;
+
+		&::after {
+			content: '';
+			position: absolute;
+			width: 17px;
+			height: 17px;
+			left: 12px;
+			top: 12px;
+			background-image: url('../images/icons/cart.svg');
+		}
+
+		span {
+			position: absolute;
+			top: 12px;
+			right: 12px;
+			width: 18px;
+			height: 18px;
+			background-color: $text-color;
+			color: $white;
+			font-size: 11px;
+			border-radius: 50%;
+			text-align: center;
+			line-height: 1.7;
+		}
+	}
+
+	&__cart {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+	}
+
+	&__hero {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+		margin-bottom: 64px;
+	}
+
+	&__content {
+		max-width: 514px;
+		width: 100%;
+		height: 482px;
+		padding: 64px;
+		background-color: $text-color;
+		color: $white;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+	}
+
+	&__title {
+		font-weight: 400;
+		margin-bottom: 28px;
+	}
+
+	&__btns {
+		display: flex;
+		align-items: center;
+	}
+
+	&__btn {
+		margin-right: 34px;
+		background-color: $accent;
+		color: $white;
+		max-width: 166px;
+		width: 100%;
+		padding: 12px 26px 12px 26px;
+	}
+
+	&__swiper {
+		max-width: 768px;
+	}
+
+	&__photo {
+		object-fit: cover;
+		max-width: 768px;
+		width: 100%;
+	}
+
+	.swiper-pagination-bullet {
+		width: 6px;
+		height: 6px;
+		background-color: rgba($white, 0.4);
+		border-radius: 0;
+	}
+
+	.swiper-pagination-bullet-active {
+		background-color: $white;
+	}
+}
